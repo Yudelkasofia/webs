@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0; /*para recetear css*/
+    padding: 0; /*para recetear css*/
+    box-sizing: border-box;
+    text-decoration: none; /*quita las lineas debajo de los enlaces*/
+    list-style: none; /*quita las bolitas que aparecen en la lista*/
+
+}
+
+body {
+    /*color de fondo*/
+    background-color: #000000;
+    font-family: 'poppins', sans-serif; /*Tipo de letra, fuente de google*/
+}
+ /*para que las letras de arriba se centren y no sobre salgan*/ 
+.container {
+    max-width: 1200;
+    margin: 0 auto;
+}
+/*para las rayas laterales*/
+.swiper-button-prev::after {
+    font-size: 25px;
+}
+
+.swiper-button-next::after {
+    font-size: 25px;
+}
+/*para modificar las flechas de color rojo*/
+.swiper-button-next {
+    color: #db241b;
+}
+
+.swiper-button-prev { 
+    color: #db241b;
+}
+
+.swiper-pagination-bullet {
+    background-color: #d3d2d2;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #db241b;
+}
+/*menu*/
+.menu {
+    position: relative;
+    top: 20px;/*para separar el menu de la parte de arriba*/
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;/*para que siempre se posicione el menu de cualquier elemento*/
+}
+
+.navbar {
+    display: flex;
+}
+
+.menu-1 {
+    margin-right: 180px;
+}
+
+.menu-2 {
+    margin-left: 180px;
+    display: flex;
+    align-items: center;/*para centrar todos los elementos*/
+}
+/*logo*/
+.logo-1 {
+    width: 0;
+}
+.logo-2 {
+    width: 350px; /*cambia el tamano logo*/
+    /*margin: 10px;*/
+}
+
+.socials {
+    display: flex;/*para que se alinien las redes sociales, en la misma fila*/
+}
+
+.social {
+    /*colocarle un circulo a los iconos de redes sociales*/
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #db241b;
+    border-radius: 50%;/*coloca el circulo em las redes sociales*/
+}
+
+.social:hover {
+    background-color: #db241b;/*para cada vez que se pase el cursor se valla midificando el color*/
+}
+
+.social img {
+    margin: 8px 0 0 10px;/*8pixeles haci arriba es la primera posicion, margin rith la segunda, margin top la tercera, msrgin left es la cuarta posicion*/
+    /*todo en alineacion es para centrar los iconos*/
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left; /*para que el menu se valla hacia la izquierda*/
+}
+/*la barra de menu*/
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 15px;
+    color: #ffffff;/*para el color de la letra*/
+    display: block;/*para coger mejor el padding*/
+}
+
+.menu .navbar ul li a:hover {
+    color: #db241b;
+}
+#menu {
+   display: none;
+}
+.menu-icono {
+    width: 25px;
+}
+/*icono*/
+.menu label {
+    cursor: pointer;/*pra colocar el icono del menu*/
+    display: none;/*para que se oculte el icono en la manera de escritorio*/
+}
+
+.header-content {
+    margin-top: 200px;/*para separar de la parte de arriba la segunda imagen*/
+    padding-bottom: 50px;/*para separar de la parte de abajo el contenido que tenemos*/
+}
+
+.slider {
+    display: flex;
+    align-items: center;/*para que los dos elementos se enctren tanto el texto como la imagen*/
+}
+
+.slider-txt {
+    margin-left: 85px;
+    width: 50%;
+}
+
+.slider-txt h1 {
+    font-size: 70px;
+    color: #ffffff;/*el color de las letras*/
+    text-transform: uppercase;/*para que todas las letras aparezcan en mayusculs*/
+    font-weight: 800;/*es el grosor de la letra*/
+}
+/*texto de abajo de la letra iphone*/
+.slider-txt p {
+    font-size: 18px;
+    color: #a7a7a7;
+}
+
+.botones {
+    margin-top: 50px;
+    
+}
+/*para los botones*/
+.btn-1 {
+    display: inline-block;/*para aplicar bien lo que es el padding*/
+    padding: 15px 35px;
+    border: 2px solid #db241b;
+    color: #ffffff;/*color dentro del enlace*/
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;/*para las letras en mayuscula*/
+    margin-right: 20px;
+    border-radius: 50px;
+}
+
+.btn-1:hover {
+    background-color: #db241b;/*para colocar color al pasar el cursor*/
+}
+
+.slider-img {
+    width: 50%;
+
+   /* margin-right: -499px; /*cambia la posicion de la imagen inicial hacia un lado*/
+    /*width: 550px;*/
+    /*height: 350px;*/
+            
+}
+/*para modificar el tamano de la imagen*/
+.slider-img img {
+    margin-right: 225px;
+    width: 550px;
+   /*/ height: 350px;*/
+}
+
+.products{
+    background-color: #0d0d0d;/*para colocar un color menus negro al */
+}
+
+.tabs{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 0px;/*izquirda y derecha*/
+}
+
+.tabs label{
+    width: 15%;
+    order: 1;
+    display: block;/*para que tome correctamente el padding y el margin*/
+    padding: 20px 0;
+    text-align: center;/*para centrar el texto*/
+    cursor: pointer;
+    color: #a7a7a7;
+    font-weight: 700;/*para el grosor de la fuente*/
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: background ease 0.2s;
+}
+
+.tabs .tab{
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding-top: 25px;/*para dejar una separacion entre los texto, es decir en el tab*/
+}
+
+/*para desaparecer los tres puntos*/
+.tabs input[type="radio"] {
+    display: none;
+}
+/*para cuando se pase el cursor colocar una linea rojo debajo de las letras del tab*/
+.tabs input[type="radio"]:checked + label{
+    border-bottom: 2px solid #db241b;
+    color: #ffffff;
+}
+/*para ser visible las imagenes que esta dentro de iphone,redmi y variedades*/
+.tabs input[type="radio"]:checked + label + .tab{
+    display: block;
+}
+
+.product{
+    display: flex;
+    align-items: center;
+    padding: 25px;/*en todas las direcciones*/
+    margin: 0 10px;/*primera posicion arriba y abajo, segunda posicion izquierda y derecha*/
+}
+
+.product-img{
+    width: 50%;
+    text-align: left;
+}
+
+.product-img h4{
+    display: inline-block;
+    padding: 5px 7px;
+    line-height: 15px;/*altura de la letra*/
+    color: #ffffff;/*color de la letra*/
+    font-size: 14px;/*tamano de la letra*/
+    text-transform: uppercase;
+    font-weight: 800;
+    border: 2px solid #555555;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+/*para modificar la imagen de abajo*/
+.product-img img{
+    width: 150px;
+    height: 120px;
+}
+/*para la seccion de dondte aparece el texto*/
+.product-txt {
+    width: 50%;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.product-txt h4{
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.product-txt p{
+    color: #a7a7a7;
+    font-size: 16px;/*tamano de la letra*/
+    margin-bottom: 15px;/*separacion hacia abajo*/
+}
+
+.product-txt span{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+}
+/*las imagenes que estan dentro de variedades*/
+.info{
+    padding: 100px 0px;
+    display: flex;
+    align-items: center;/*para que los elementos aparezcan centrados*/
+}
+
+.info-img{
+    width: 50%;
+}
+/*para afectar directamente la imagen*/
+.info-img img{
+    width: 500px;
+    height: 350px;/*la altura de la imagen*/
+}
+/*para que las imagenes se mueban correctamente*/
+.info-txt{
+    width: 50%;/*para que las imagenes que se encuentran dentro de la seccion se mueban correctamente*/
+}
+/*informacion y texto*/
+.info-txt h2{
+    font-size: 75px;
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+/*para modificar la seccion de texto al lado de la informacion*/
+.info-txt p{
+    font-size: 18px;
+    color: #a7a7a7;
+    margin-bottom: 50px;
+}
+.btn-2{
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #db241b;
+    color: #ffffff;/*color de la letra*/
+    font-weight: 800;/*grosor de la letra*/
+    text-transform: uppercase; /*para poner en mayuscula todas las letras*/
+    border-radius: 50px; /*redondea las esquinas*/
+}
+
+.btn-2:hover{
+    background-color: #ab1c15; /*hacerlo animado al pasar el mouse*/
+}
+
+.horario{
+    padding: 100px 0px;
+    background-color: #0d0d0d;
+}
+
+.horario-info h2{
+    font-size: 75px;
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.horario-txt{
+    display: flex;
+    justify-content: space-between;/*separa los elementos correctamente*/
+} 
+.txt{
+    color: #ffffff;/*para que las letras aparezcan de color blanco*/
+}
+
+.txt h4{
+font-size: 18px;
+color: #a7a7a7;/*color de la letra*/
+margin-bottom: 30px;
+}
+
+.txt p { 
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom:15px
+}
+/*modificacion de mapa*/
+.map{
+  filter: grayscale(100) invert(92%) contrast(93%);/*la funcion es hacer que se oscurezca el mapa*/
+}
+/*los ultimos textos*/
+.footer{
+padding: 100px 0px;
+display: flex;
+justify-content: space-between;/*para que los textos de abajo tengan espacios entre ellos*/
+}
+
+.links h4{
+    color: #ffffff;
+    text-transform: uppercase;/*para que las estran aparezcan en mayuscula*/
+    margin-bottom: 25px;
+}
+
+.links ul li a{
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;/*para que se coloquen correctamente las separaciones*/
+}
+/*resolucion */
+
+/*todo ese codigo espara que al hacer la pestana mas grande se pueda visualizar todo perfectamente*/
+@media(max-width: 991px) {
+    .menu{
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .menu-2{
+        display: none;/*para que no aparezca la parte de arriba*/
+    }
+/*eso es para que no aparezca la segunda parte*/
+    .logo-1{
+        width: 100px;
+    }
+
+    .logo-2{
+        width: 0;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #181818;
+        display: none;/*para ocultarlo por un rato*/
+    }
+
+    .menu .navbar ul li{
+      width: 100%;/*100% para que cubra todo el ancho*/
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;/*eso es lo que hace que ya funcione nuestro menu*/
+    }
+
+    .header-content{
+        padding: 30px;
+        margin-top: 100px;
+    }
+
+    .slider{
+        flex-direction: column;
+    }
+
+    .slider-txt{
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .slider-txt h1{
+        font-size: 50px;
+    }
+ 
+    .slider-txt p{
+        font-size: 16px;
+    }
+    .btn-1 {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    .slider-img{
+        width: 100%;
+        text-align: center;
+    }
+
+    .slider-img img {
+        margin-right: 0px;
+        width: 300px;/*para modificar el tamano de nuestro primer producto o imagen*/
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets, .swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction{
+        bottom: -7px;/*separa los bulets*/
+    }
+
+    .tabs{
+        padding: 50px 30px;
+    }
+
+    .tabs label{
+        width: 33%;
+    }
+
+    .info{
+        padding: 30px;
+        flex-direction: column;
+    }
+
+    .info img{
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-img img{
+        width: 400px;
+        height: 200px;
+        margin-bottom: 25px;
+    }
+
+    .info-txt{
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-txt h2{
+        font-size: 50px;
+    }
+
+    .info-txt p{
+        font-size: 16px;
+    }
+    .btn-1{
+        font-size: 16px;/*para el tamano de los botones*/
+    }
+    .horario {
+        padding: 30px;
+        text-align: center;
+    }
+    .horario-info h2 {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    .horario-txt {
+        flex-direction: column;
+    }
+    .socials {
+        justify-content: center;
+    }
+
+    .social img {
+        margin: 8px 0 0 0 ;
+    }
+
+.footer{
+    padding: 30px;
+    flex-direction: column;
+    text-align: center;
+}
+.links h4{
+    margin: 25px 0px 10px 0px;
+}
+}
+
